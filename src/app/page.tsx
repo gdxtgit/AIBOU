@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <>
@@ -13,6 +15,7 @@ export default function Home() {
             </span>
           </a>
           <nav className="hidden md:flex items-center gap-5 text-gray-900/75 font-semibold">
+            <Link href="/story" className="hover:text-gray-900">AIBOUの原点</Link>
             <a href="#problem" className="hover:text-gray-900">お悩み</a>
             <a href="#reasons" className="hover:text-gray-900">選ばれる理由</a>
             <a href="#trainer" className="hover:text-gray-900">トレーナー</a>
@@ -136,6 +139,26 @@ export default function Home() {
                 </p>
               </div>
             </aside>
+          </div>
+        </section>
+
+        {/* ========== Story Bridge ========== */}
+        <section className="py-10 px-6 bg-gray-950 border-t border-white/5">
+          <div className="w-full max-w-[1280px] mx-auto">
+            <Link
+              href="/story"
+              className="group flex items-center justify-between gap-6 p-6 md:p-8 rounded-2xl bg-white/5 border border-white/8 hover:bg-white/8 transition-all"
+            >
+              <div>
+                <p className="text-white/50 text-sm font-semibold mb-1.5">Founder&apos;s Story</p>
+                <p className="text-white text-[clamp(16px,1.4vw,20px)] font-bold leading-relaxed">
+                  なぜ「AIトレーナー」という仕事を始めたのか。
+                  <br className="hidden md:inline" />
+                  広告代理店で100人以上が壊れていく現場を見た、創業者の原体験。
+                </p>
+              </div>
+              <span className="shrink-0 text-white/40 group-hover:text-white/70 text-2xl transition-colors">→</span>
+            </Link>
           </div>
         </section>
 
